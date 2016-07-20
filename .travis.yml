@@ -1,0 +1,2 @@
+language: php
+script: tar zcf torrentkim.dlm src/INFO src/search.php
