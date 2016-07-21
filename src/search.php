@@ -17,7 +17,7 @@ class SynoDLMSearchTorrentKim {
 	public function parse($plugin, $response) {
 		$response = preg_replace("/<pubDate>/i", "<pubDate>" . date("r"), $response);
 		$response = preg_replace("/<\/pubDate>/i", "</pubDate><category>All</category>", $response);
-		// $response = preg_replace("/\&/i", "&amp;", $response);
+		$response = preg_replace("/\&/i", "&amp;", $response);
 		$response = preg_replace("/<description><\/description>/i", "<description><![CDATA[Category: All<br />Subcategory: All<br />Size: 100&nbsp;kilobyte<br />Language: Unknown<br />Uploaded by: Unknown]]></description>", $response);
 		$response = rawurldecode($response);
 		return $plugin->addRSSResults($response);
