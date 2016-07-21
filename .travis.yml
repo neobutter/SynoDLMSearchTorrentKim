@@ -1,5 +1,8 @@
 language: php
-script: tar zcf torrentkim.dlm src/INFO src/search.php
+script:
+  - cd src
+  - tar zcf torrentkim.dlm INFO search.php -C ../
+  - cd ..
 deploy:
   provider: releases
   api_key:
