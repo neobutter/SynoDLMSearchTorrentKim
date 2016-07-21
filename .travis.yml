@@ -1,8 +1,5 @@
 language: php
-script:
-  - cd src
-  - tar zcf torrentkim.dlm INFO search.php -C ../
-  - cd ..
+script: tar zcf ../torrentkim.dlm INFO search.php -C src/
 deploy:
   provider: releases
   api_key:
@@ -10,6 +7,7 @@ deploy:
   file: torrentkim.dlm
   skip_cleanup: true
   overwrite: true
+  prerelease: true
   on:
     tags: true
     repo: neobutter/SynoDLMSearchTorrentKim
