@@ -19,7 +19,8 @@ class SynoDLMSearchTorrentKim {
 		$response = preg_replace("/<\/pubDate>/i", "</pubDate><category>All</category>", $response);
 		$response = preg_replace("/\&/i", "&amp;", $response);
 		$response = preg_replace("/<description><\/description>/i", "<description><![CDATA[Category: All<br />Subcategory: All<br />Size: 100&nbsp;kilobyte<br />Language: Unknown<br />Uploaded by: Unknown]]></description>", $response);
-		$response = rawurldecode($response);
+		$response = preg_replace("/<enclosure[^>]*url=[\"']?([^>\"']+)[\"']?[^>]*>/i", "<enclosure url=\"" . "http://www.mininova.org/get/13265623" . "\" length=\"0\" type=\"application/x-bittorrent\" />", $response);
+		// $response = rawurldecode($response);
 		return $plugin->addRSSResults($response);
 	}
 }
