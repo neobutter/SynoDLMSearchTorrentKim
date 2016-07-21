@@ -1,4 +1,5 @@
 language: php
+install: true
 script: tar zcf torrentkim.dlm -C ./src INFO search.php
 deploy:
   provider: releases
@@ -9,5 +10,5 @@ deploy:
   overwrite: true
   prerelease: true
   on:
-    tags: false
+    tags: true
     repo: neobutter/SynoDLMSearchTorrentKim
