@@ -1,9 +1,20 @@
-# SynoDLMSearchTorrentKim  ![build-status](https://travis-ci.org/neobutter/SynoDLMSearchTorrentKim.svg?branch=master)
+# SynoDLMSearchTorrentKim  
+
+[![Build Status](https://travis-ci.org/neobutter/SynoDLMSearchTorrentKim.svg?branch=master)](https://travis-ci.org/neobutter/SynoDLMSearchTorrentKim)
 
 Synology Search Module for TorrentKim
 
+## Intro
+This is torrent search module for synology download station.  
+It works with torrentkim3.net's RSS feed.
+
 ## Installation
-1. Download torrentkim.dlm file at release page
-2. Open your Synology DSM
-3. Open Download Station
-4. Click 
+Please read article below.  
+```
+https://nas.moe/archives/667
+```
+
+## Known issues
+* It does not display the file size. Because RSS results didn't have size information.
+* Display current date in publish date field.
+* Display zero in seed/leecher field.
