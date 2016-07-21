@@ -9,5 +9,4 @@ deploy:
   overwrite: true
   prerelease: true
   on:
-    tags: true
     repo: neobutter/SynoDLMSearchTorrentKim
